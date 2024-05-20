@@ -80,6 +80,8 @@ function handleClick(e) {
             <iframe src={`https://commons.wikimedia.org/wiki/File:En-us-${word.toLowerCase().trim()}.ogg?embedplayer=yes`} width="50" height="40" frameBorder="0" loading="lazy" allow="autoplay; picture-in-picture" allowFullScreen>
             </iframe>
             <ul>
+                <span onClick={handleClick} style={{cursor: "pointer"}}>Phonetic: </span>
+                {wordInfo.word && wordInfo.phonetics.filter(phonetic => phonetic.text)[0].text}
                 {wordInfo.word && 
                     wordInfo.meanings.map((meaning, i) => 
                         <div key={meaning+i}>
