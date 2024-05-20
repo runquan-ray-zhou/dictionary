@@ -22,7 +22,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/searchword" element={<Search />} />
             <Route path="/wordbank" element={<WordBank />} />
-            <Route path="/:word" element={<Word />} />
+            <Route path="/word/:word" element={<Word />} />
           </Routes>
         </Router>
       </main>

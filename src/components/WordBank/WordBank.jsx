@@ -17,7 +17,7 @@ export default function WordBank() {
     },[])
 
     function handleClick(e) {
-        navigate(`/${e.target.textContent}`)
+        navigate(`/word/${e.target.textContent}`)
     }
 
     return (

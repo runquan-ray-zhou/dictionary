@@ -5,7 +5,7 @@ export default function Search() {
 
     function findWord(e) {
         e.preventDefault()
-        navigate(`/${e.target.word.value}`)
+        navigate(`/word/${e.target.word.value}`)
     }
 
     return (
