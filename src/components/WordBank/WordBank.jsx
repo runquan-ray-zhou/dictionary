@@ -34,7 +34,7 @@ export default function WordBank() {
             <h1>Word Bank</h1>
             <h2>Current Total Words: {wordList.length}</h2>
             <ul>
-                {wordList.length && wordList.map((word, i) => 
+                {wordList[0] && wordList.map((word, i) => 
                 <li key={word + i}>
                     <span onClick={handleClick} style={{cursor: "pointer"}}>{word.singleWord}</span>
                     <button onClick={() => deleteWord(word.id)}>Delete</button>
