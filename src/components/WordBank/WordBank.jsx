@@ -20,6 +20,15 @@ export default function WordBank() {
         navigate(`/word/${e.target.textContent}`)
     }
 
+    function deleteWord(id) {
+        const options = { method: 'DELETE' };
+        return fetch(
+          `https://664a280fa300e8795d41295c.mockapi.io/api/v1/wordbank/${id}`,
+          options
+        ).then(() => navigate(0))
+        .catch(err => console.error(err));
+    }
+
     return (
         <div>
             <h1>Word Bank</h1>
@@ -28,7 +37,7 @@ export default function WordBank() {
                 {wordList.length && wordList.map((word, i) => 
                 <li key={word + i}>
                     <span onClick={handleClick} style={{cursor: "pointer"}}>{word.singleWord}</span>
-                    <button>Delete</button>
+                    <button onClick={() => deleteWord(word.id)}>Delete</button>
                 </li>)}
             </ul>
         </div>

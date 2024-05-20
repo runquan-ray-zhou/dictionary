@@ -71,7 +71,7 @@ useEffect(() => {
 function handleClick(e) {
     const { nodeName } = e.target;
     if (nodeName === 'SPAN') {
-        navigate(`/word/${e.target.textContent.replace(/[.,\/"'#!?$%\^&\*;:{}=\-_`~()]/g,"").toLowerCase().trim()}`)
+        navigate(`/word/${e.target.textContent.replace(/[.,\/“”"'#!?$%\^&\*;:{}=\-_`~()]/g,"").toLowerCase().trim()}`)
     }
   }
     return (

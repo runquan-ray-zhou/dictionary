@@ -18,9 +18,9 @@ function App() {
           <NavBar />
           <Routes>
             <Route path="/" element={<Login />} />
-            <Route path="/aboutus" element={<About />} />
+            <Route path="/about" element={<About />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/searchword" element={<Search />} />
+            <Route path="/search" element={<Search />} />
             <Route path="/wordbank" element={<WordBank />} />
             <Route path="/word/:word" element={<Word />} />
           </Routes>

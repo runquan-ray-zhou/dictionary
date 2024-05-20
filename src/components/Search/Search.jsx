@@ -5,7 +5,11 @@ export default function Search() {
 
     function findWord(e) {
         e.preventDefault()
-        navigate(`/word/${e.target.word.value}`)
+        if (!e.target.word.value) {
+            alert("Please input a word")
+        } else {
+            navigate(`/word/${e.target.word.value}`)
+        }
     }
 
     return (

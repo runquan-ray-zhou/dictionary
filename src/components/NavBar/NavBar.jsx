@@ -6,13 +6,13 @@ export default function NavBar() {
                 <Link to="/home">
                     <button>Home</button>
                 </Link>
-                <Link to="/searchword">
+                <Link to="/search">
                     <button>Search</button>
                 </Link>
                 <Link to="/wordbank">
                     <button>Word Bank</button>
                 </Link>
-                <Link to="/aboutus">
+                <Link to="/about">
                     <button>About</button>
                 </Link>
         </div>
