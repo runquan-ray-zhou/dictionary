@@ -1,14 +1,20 @@
 import { Link } from "react-router-dom";
+import "./Home.css"
+import bank from '../../assets/wordbank.png'
+import search from '../../assets/search.png'
 
 export default function Home() {
     return(
-        <div>
-            <div>This is the Home page</div>
+        <div className="home">
             <Link to="/search">
-            <button>This is the search for word button</button>
+            <button>
+                <img src={search} alt="search icon" />
+            </button>
             </Link>
             <Link to="/wordbank">
-            <button>This is the open word bank button</button>
+            <button>
+                <img src={bank} alt="word bank icon" />
+            </button>
             </Link>
         </div>
     )
