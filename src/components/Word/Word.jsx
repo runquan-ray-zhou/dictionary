@@ -18,7 +18,13 @@ export default function Word() {
         singleWord: `${word}`
     })
 
+    const [src, setSrc] = useState("")
+
     const url = BASE_URL + word
+
+    useEffect(() => {
+        setSrc(`https://commons.wikimedia.org/wiki/File:En-us-${word.toLowerCase().trim()}.ogg?embedplayer=yes`)
+    }, [word])
 
     useEffect(() => {
         setNewWord({...newWord, singleWord: `${word}`})
@@ -51,7 +57,7 @@ export default function Word() {
         checkWordInBank(word)
         .then((haveWord) => {
         if(haveWord) {
-            alert("This word is already in Word Bank")         
+            alert("This word is already in the Word Bank")         
         } else {
             addWord(newWord)
         }
@@ -63,7 +69,11 @@ useEffect(() => {
     fetch(url)
     .then((res) => res.json())
     .then((res) => {
-        setWordInfo(...res)
+        if(!res.title) {
+            setWordInfo(...res)
+        } else {
+            navigate("/error")
+        }
     })
     .catch(err => console.error(err))
   }, [word])
@@ -77,7 +87,7 @@ function handleClick(e) {
     return (
         <div className="word">
             <h1>{wordInfo.word && <span>{word}</span>}</h1>
-            <iframe src={`https://commons.wikimedia.org/wiki/File:En-us-${word.toLowerCase().trim()}.ogg?embedplayer=yes`} width="50" height="40" frameBorder="0" loading="lazy" allow="autoplay; picture-in-picture" allowFullScreen>
+            <iframe src={src} width="50" height="40" frameBorder="0" loading="lazy" allow="autoplay; picture-in-picture" allowFullScreen>
             </iframe>
             <ul>
                 {/* <span onClick={handleClick} style={{cursor: "pointer"}}>Phonetic: </span>

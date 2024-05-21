@@ -7,6 +7,7 @@ import Login from './components/Login/Login';
 import Search from './components/Search/Search';
 import Word from './components/Word/Word';
 import WordBank from './components/WordBank/WordBank';
+import Error from './components/Error/Error'
 import './App.css'
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
             <Route path="/search" element={<Search />} />
             <Route path="/wordbank" element={<WordBank />} />
             <Route path="/word/:word" element={<Word />} />
+            <Route path="/error" element={<Error />} />
+            <Route path="/*" element={<Error />} />
           </Routes>
         </Router>
       </main>
