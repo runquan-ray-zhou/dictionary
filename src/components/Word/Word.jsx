@@ -75,18 +75,19 @@ function handleClick(e) {
     }
   }
     return (
-        <div>
+        <div className="word">
             <h1>{wordInfo.word && <span>{word}</span>}</h1>
             <iframe src={`https://commons.wikimedia.org/wiki/File:En-us-${word.toLowerCase().trim()}.ogg?embedplayer=yes`} width="50" height="40" frameBorder="0" loading="lazy" allow="autoplay; picture-in-picture" allowFullScreen>
             </iframe>
             <ul>
-                <span onClick={handleClick} style={{cursor: "pointer"}}>Phonetic: </span>
-                {wordInfo.word && wordInfo.phonetics.filter(phonetic => phonetic.text)[0].text}
+                {/* <span onClick={handleClick} style={{cursor: "pointer"}}>Phonetic: </span>
+                {wordInfo.word && wordInfo.phonetics.filter(phonetic => phonetic.text)[0].text} */}
                 {wordInfo.word && 
                     wordInfo.meanings.map((meaning, i) => 
                         <div key={meaning+i}>
-                            <span onClick={handleClick} style={{cursor: "pointer"}}>Part of Speech:</span> 
+                            <span onClick={handleClick} style={{cursor: "pointer"}}>Part of Speech: </span> 
                             <span onClick={handleClick} style={{cursor: "pointer"}}>"{meaning.partOfSpeech}"</span>
+                            <br />
                             <br />
                             <span onClick={handleClick} style={{cursor: "pointer"}}>Definition:</span> 
                             <ul>{meaning.definitions.map((each, i) => 
@@ -94,25 +95,25 @@ function handleClick(e) {
                             <span key={word+i} onClick={handleClick} style={{cursor: "pointer"}}>{word} </span>)}
                             </div>)}
                             </ul>
-
+                            <br />
                             {meaning.definitions.some(obj => obj.hasOwnProperty("example")) && 
-                            <span onClick={handleClick} style={{cursor: "pointer"}}>Examples:</span>} 
+                            <span onClick={handleClick} style={{cursor: "pointer"}}>Examples: </span>} 
                             <ul>{meaning.definitions.map((each, i) => 
                             <div key={each+i}>{each.example && each.example.split(" ").map((word, i) => 
                             <span key={word+i}onClick={handleClick} style={{cursor: "pointer"}}>{word} </span>)}
                             </div>)}
                             </ul>
-
+                            <br />
                             {meaning.synonyms[0] &&
-                            <span onClick={handleClick} style={{cursor: "pointer"}}>Synonyms:</span>} 
+                            <span onClick={handleClick} style={{cursor: "pointer"}}>Synonyms: </span>} 
                             <ul>{meaning.synonyms.map((synonym, i) => 
                             <div key={synonym+i}>{synonym.split(" ").map((word, i) => 
                             <span key={word+i}onClick={handleClick} style={{cursor: "pointer"}}>{word} </span>)}
                             </div>)}
                             </ul>
-
+                            <br />
                             {meaning.antonyms[0] &&
-                            <span onClick={handleClick} style={{cursor: "pointer"}}>Antonyms:</span>} 
+                            <span onClick={handleClick} style={{cursor: "pointer"}}>Antonyms: </span>} 
                             <ul>{meaning.antonyms.map((antonym, i) => 
                             <div key={antonym+i}>{antonym.split(" ").map((word, i) =>
                             <span key={word+i}onClick={handleClick} style={{cursor: "pointer"}}>{word} </span>)}
@@ -123,7 +124,7 @@ function handleClick(e) {
                         </div>
                     )}
             </ul>
-            <button onClick={() => addWordToBank(word)}>Add "{word.toLowerCase()}" To Word Bank</button>
+            <button className="addWord__button"onClick={() => addWordToBank(word)}>Add "<span className="addWord__button-word">{word.toLowerCase()}</span>" To Word-Bank</button>
         </div>
     )
 }

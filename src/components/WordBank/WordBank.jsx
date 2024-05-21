@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "./WordBank.css"
 
 export default function WordBank() {
 
@@ -30,7 +31,7 @@ export default function WordBank() {
     }
 
     return (
-        <div>
+        <div className="wordBank">
             <h1>Word Bank</h1>
             <h2>Current Total Words: {wordList.length}</h2>
             <ul>
