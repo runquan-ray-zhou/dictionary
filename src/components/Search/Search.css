@@ -13,13 +13,15 @@
 }
 
 .search__input {
-    width: 200px;
-    height: 35px;
-    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    width: 180px;
+    height: 38px;
+    font-size: 1.3em;
 }
 
 .search__icon {
-    width: 90px;
+    width: 70px;
     padding: 0;
     cursor: pointer;
     background: #003049;

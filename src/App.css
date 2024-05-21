@@ -1,6 +1,7 @@
 body {
     background-color: rgb(242, 72, 34);
     padding: 85px 15px 15px 15px;
+    margin: 0;
 }
 ul {
     list-style: none;
