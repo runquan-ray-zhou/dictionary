@@ -32,7 +32,7 @@ export default function WordBank() {
 
     return (
         <div className="wordBank">
-            <h1>Word Bank</h1>
+            <h1>Word-Bank</h1>
             <h2>Current Total Words: {wordList.length}</h2>
             <ul>
                 {wordList[0] && wordList.map((word, i) => 

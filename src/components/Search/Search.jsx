@@ -16,7 +16,7 @@ export default function Search() {
 
     return (
         <div className="search">
-            <h1>Search For Word</h1>
+            <h1>Search For A Word</h1>
             <form className="search__form" onSubmit={findWord}>
                 <input className="search__input" type="text" name="word" id="word" placeholder="Search Dictionary"/>
                 <button className="search__icon">
