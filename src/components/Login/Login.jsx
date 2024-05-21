@@ -18,7 +18,7 @@ export default function Login() {
                 <p>2024 EDITION</p>
                 </div>
                 <Link to="/home">
-                    <button className="login-button">ENTER</button>
+                    <button className="login-button">LOGIN</button>
                 </Link>
             </div>
         </div>
