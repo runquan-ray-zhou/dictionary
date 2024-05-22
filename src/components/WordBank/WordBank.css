@@ -19,10 +19,9 @@
         padding-top: 10px;
     }
     button {
-        font-size: 1.004em;
         margin-left: 100px;
         cursor: pointer;
-        background: #003049;
+        background-color: rgb(242, 72, 34);
         color: white;
     }
 }
