@@ -6,7 +6,7 @@ const BASE_URL="https://api.dictionaryapi.dev/api/v2/entries/en/"
 
 const BANK_URL="https://664a280fa300e8795d41295c.mockapi.io/api/v1/wordbank"
 
-export default function Word() {
+export default function Word({ setErrorWord }) {
 
     const navigate = useNavigate()
 
@@ -66,6 +66,7 @@ useEffect(() => {
         if(!res.title) {
             setWordInfo(...res)
         } else {
+            setErrorWord(word)
             navigate("/error")
         }
     })

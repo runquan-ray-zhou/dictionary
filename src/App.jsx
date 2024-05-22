@@ -12,6 +12,8 @@ import './App.css'
 
 function App() {
 
+  const [errorWord, setErrorWord] = useState("")
+
   return (
     <div className="App.css">
       <main>
@@ -23,8 +25,8 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/search" element={<Search />} />
             <Route path="/wordbank" element={<WordBank />} />
-            <Route path="/word/:word" element={<Word />} />
-            <Route path="/error" element={<Error />} />
+            <Route path="/word/:word" element={<Word setErrorWord={setErrorWord}/>} />
+            <Route path="/error" element={<Error errorWord={errorWord}/>} />
             <Route path="/*" element={<Error />} />
           </Routes>
         </Router>
