@@ -38,7 +38,7 @@ export default function WordBank() {
                 {wordList[0] && wordList.map((word, i) => 
                 <li key={word + i}>
                     <span onClick={handleClick} style={{cursor: "pointer"}}>{word.singleWord}</span>
-                    <button onClick={() => deleteWord(word.id)}>Delete</button>
+                    <button className="wordBank__delete-button"onClick={() => deleteWord(word.id)}>Delete</button>
                 </li>)}
             </ul>
         </div>
