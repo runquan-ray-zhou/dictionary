@@ -18,13 +18,7 @@ export default function Word() {
         singleWord: `${word}`
     })
 
-    const [src, setSrc] = useState("")
-
     const url = BASE_URL + word
-
-    useEffect(() => {
-        setSrc(`https://commons.wikimedia.org/wiki/File:En-us-${word.toLowerCase().trim()}.ogg?embedplayer=yes`)
-    }, [word])
 
     useEffect(() => {
         setNewWord({...newWord, singleWord: `${word}`})
@@ -87,8 +81,9 @@ function handleClick(e) {
     return (
         <div className="word">
             <h1>{wordInfo.word && <span>{word}</span>}</h1>
-            <iframe src={src} width="50" height="40" frameBorder="0" loading="lazy" allow="autoplay; picture-in-picture" allowFullScreen>
-            </iframe>
+                {wordInfo.word ? (wordInfo.phonetics.filter(phonetic => phonetic.audio).length > 0 ? (
+                <audio controls src={wordInfo.phonetics.filter(phonetic => phonetic.audio)[0].audio} />
+                ) : (<p>Sorry, No Audio Found</p>)) : (<p>yes, there is audio</p>)}
             <ul>
                 {/* <span onClick={handleClick} style={{cursor: "pointer"}}>Phonetic: </span>
                 {wordInfo.word && wordInfo.phonetics.filter(phonetic => phonetic.text)[0].text} */}
