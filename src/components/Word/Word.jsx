@@ -85,12 +85,16 @@ function handleClick(e) {
                 <audio controls src={wordInfo.phonetics.filter(phonetic => phonetic.audio)[0].audio} />
                 ) : (<p>Sorry, No Audio Found</p>)) : (<p>yes, there is audio</p>)}
             <ul>
-                {/* <span onClick={handleClick} style={{cursor: "pointer"}}>Phonetic: </span>
-                {wordInfo.word && wordInfo.phonetics.filter(phonetic => phonetic.text)[0].text} */}
+                <span onClick={handleClick} style={{cursor: "pointer"}}>Phonetic: </span>
+                {wordInfo.word ? (wordInfo.phonetics.filter(phonetic => phonetic.text).length > 0 ? (
+                <p>{wordInfo.phonetics.filter(phonetic => phonetic.text)[0].text}</p>
+                ) : (<p>Sorry, No Phonetic Found</p>)) : (<p>Yes, there is phonetic</p>)}
                 {wordInfo.word && 
                     wordInfo.meanings.map((meaning, i) => 
                         <div key={meaning+i}>
-                            <span onClick={handleClick} style={{cursor: "pointer"}}>Part of Speech: </span> 
+                            <span onClick={handleClick} style={{cursor: "pointer"}}>Part of Speech: </span>
+                            <br />
+                            <br /> 
                             <span onClick={handleClick} style={{cursor: "pointer"}}>"{meaning.partOfSpeech}"</span>
                             <br />
                             <br />
