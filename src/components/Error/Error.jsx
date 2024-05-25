@@ -1,6 +1,6 @@
 import "./Error.css"
 
-export default function About({ errorWord }) {
+export default function Error({ errorWord }) {
 
     return (
         <div className="error">
