@@ -47,8 +47,6 @@ The application is built with the following key features:
 
 ## Contact
 
-**Runquan Ray Zhou**  
-[LinkedIn](https://www.linkedin.com/in/runquanrayzhou/)  
-rzhou@pursuit.org  
+Runquan Ray Zhou - [LinkedIn](https://www.linkedin.com/in/runquanrayzhou/) - rzhou@pursuit.org
 
 Project Live Link: [https://wordwise-dictionary.netlify.app/](https://pocket-dictionary-app.netlify.app/)
