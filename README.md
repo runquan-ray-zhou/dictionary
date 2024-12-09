@@ -23,14 +23,17 @@
 The application is built with the following key features:
 
 1. **Dynamic Word Search**:
+
    - Fetches word definitions and related data from the [Dictionary API](https://dictionaryapi.dev/)
    - Supports real-time searching and instant results
 
 2. **Favorite Words**:
+
    - Allows users to save and manage favorite words in a word bank
    - Uses Mock API for persistent data storage
 
 3. **Clickable Words**:
+
    - Displays related words and clickable definitions
    - Enables easy navigation to explore definitions of linked words
 
