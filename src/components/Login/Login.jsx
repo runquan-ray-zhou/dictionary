@@ -14,7 +14,7 @@ export default function Login() {
       <span>Pocket Dictionary Web App</span>
       <div className="login-button__container">
         <div className="edition">
-          <p>2024 EDITION</p>
+          <p>2025 EDITION</p>
         </div>
         <Link to="/home">
           <button className="login-button">ENTER</button>

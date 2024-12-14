@@ -17,7 +17,7 @@
   .fa-solid {
     margin: 5px 30px;
     font-size: 50px;
-    color: white;
+    color: rgb(242, 72, 34);
     cursor: pointer;
   }
   .fa-brands:hover,
@@ -30,7 +30,7 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: 5px solid white;
+    border: 5px solid rgb(242, 72, 34);
     cursor: auto;
   }
   .About__img:hover {
