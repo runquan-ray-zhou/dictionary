@@ -10,16 +10,32 @@ export default function About() {
       />
       <p>PokéVocab By: Runquan (Ray) Zhou</p>
       <div className="About__icons">
-        <a href="mailto:rzhou@pursuit.org">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="mailto:rzhou@pursuit.org"
+        >
           <i className="fa-regular fa-envelope"></i>
         </a>
-        <a href="https://github.com/runquan-ray-zhou">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/runquan-ray-zhou"
+        >
           <i className="fa-brands fa-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/runquanrayzhou/">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/in/runquanrayzhou/"
+        >
           <i className="fa-brands fa-linkedin"></i>
         </a>
-        <a href="https://github.com/runquan-ray-zhou/2.9-linknyc">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/runquan-ray-zhou/dictionary"
+        >
           <i className="fa-solid fa-code"></i>
         </a>
       </div>
