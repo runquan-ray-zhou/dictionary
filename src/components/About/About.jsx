@@ -5,7 +5,7 @@ export default function About() {
     <div className="About">
       <img
         className="About__img"
-        src="https://media.licdn.com/dms/image/v2/D4E03AQHV7_mind9zJQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709449259555?e=1736985600&v=beta&t=Jim9DL0dySasr3wO2WLp8C1xrrJ_KKsTSJNO1QbbIo8"
+        src="src/assets/GhibliSelfPortrait.png"
         alt="self portrait"
       />
       <p>PokéVocab By: Runquan (Ray) Zhou</p>
