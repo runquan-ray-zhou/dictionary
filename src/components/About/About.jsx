@@ -1,13 +1,10 @@
 import "./About.css";
+import selfPortrait from "../../assets/GhibliSelfPortrait.png";
 
 export default function About() {
   return (
     <div className="About">
-      <img
-        className="About__img"
-        src="src/assets/GhibliSelfPortrait.png"
-        alt="self portrait"
-      />
+      <img className="About__img" src={selfPortrait} alt="self portrait" />
       <p>PokéVocab By: Runquan (Ray) Zhou</p>
       <div className="About__icons">
         <a
